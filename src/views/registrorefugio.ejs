@@ -1,0 +1,99 @@
+<%- include('partials/head'); %>
+<%- include('partials/header'); %>
+<form class="section__form-container" method="POST" action="/registrorefugio" enctype="multipart/form-data">
+
+    <div class="form_iz">
+        <h3>Información personal:</h3>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" class="inputtext"
+            placeholder="Ingrese su nombre:"><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" class="inputtext"
+            placeholder="Ingrese su apellido:"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="inputtext"
+            placeholder="Ingrese su email:"><br>
+
+        <label for="perros">¿Cuántos perros tiene dentro del refugio?:</label>
+        <input type="number" id="candog" name="candog" class="inputtext"
+            placeholder="Cantidad de perros:"><br>
+
+        <label for="personas">¿Cuántas personas ayudan en el refugio?:</label>
+        <input type="number" id="canper" name="canper" class="inputtext"
+            placeholder="Cantidad de personas:"><br>
+
+        <h3>Información de los veterinarios</h3>
+
+        <label for="nombrevet">Nombre del veterinario:</label>
+        <input type="text" id="nombrevet" name="nombrevet" class="inputtext"
+            placeholder="Nombre del veterinario:"><br>
+
+        <label for="apellvet">Apellido del veterinario:</label>
+        <input type="text" id="apellvet" name="apellvet" class="inputtext"
+            placeholder="Apellido del veterinario:"><br>
+
+        <label for="celular">Celular:</label>
+        <input type="text" id="celvet" name="celular" class="inputtext"
+            placeholder="Ingrese su celular:"><br>
+
+        <label for="veterinaria">Nombre de la veterinaria:</label>
+        <input type="text" id="vet" name="veterinaria" class="inputtext"
+            placeholder="Nombre de la Veterinaria:"><br>
+
+        <label for="textarea1">Ingrese una descripcion del refugio:</label>
+        <textarea name="textarea1" id="textarea1" cols="30" rows="10">
+            Ingrese una descripcion del refugio.
+        </textarea>
+
+    </div>
+    <div class="form_iz">
+        <h3>Información del Refugio:</h3>
+        <label for="direccion">Nombre completo del Refugio:</label>
+        <input type="text" id="nombrerefu" name="nombrerefu" class="inputtext"
+            placeholder="Ingrese la direccion:"><br>
+        <label for="direccion">Dirección completa del refugio:</label>
+        <input type="text" id="direccion" name="direccion" class="inputtext"
+            placeholder="Ingrese la direccion:"><br>
+
+        <label for="cp">Código Postal:</label>
+        <input type="text" id="cp" name="cp" class="inputtext"
+            placeholder="Codigo Postal:"><br>
+
+        <select id="ciudad" name="ciudad" class="inputtext" class="inputtext">
+            <option value="">Seleccionar Ciudad</option>
+            <option value="Ciudad de Mexico">Ciudad de Mexico</option>
+            <option value="Guadalajara">Guadalajara</option>
+            <option value="Monterrey">Monterrey</option>
+        </select> <br>
+
+        <label for="estado">Estado:</label>
+        <select id="estado" name="estado" class="inputtext">
+            <option value="">Seleccionar Estado:</option>
+            <option value="Estado de Mexico">Estado de Mexico</option>
+            <option value="Estado de Sonora">Estado de Sonora</option>
+            <option value="Estado de Aguas Calientes">Estado de Aguas Calientes</option>
+        </select><br>        
+        
+        <label for="codigo-postal">Cargar Imagenes del Refugio, Minimo 5 imagenes</label>
+        <input type="file" id="img1" name="img1" class="inputtext" multiple><br>      
+
+        <h3>Información de cuenta bancaria:</h3>
+        <label for="bank">Entidad Bancaria de la cuenta:</label>
+        <input type="text" id="bank" name="bank" class="inputtext" placeholder="Banco:"><br>
+
+        <label for="bankc">CLABE:</label><br>
+        <input type="text" id="bankc" name="bankc" class="inputtext" placeholder="CLABE bancaria:"><br>
+
+        <label for="titularcuenta">Nombre del titular de la cuenta:</label>
+        <input type="text" id="titularcuenta" name="titularcuenta" class="inputtext"
+            placeholder="Nombre del titular de la cuenta:"><br>
+
+        <input type="submit" value="Registrar" name="submit" class="btn" id="submit">
+
+    </div>
+
+</form>
+
+ <%- include('partials/footer'); %>

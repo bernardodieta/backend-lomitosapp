@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Subir una Imagen</h1>
+    <form action="http://localhost:3000/register" method="post" enctype="multipart/form-data">
+        <input type="text" name="nombre" placeholder="nombre">
+        <input type="file" name="imagen" id="imagenInput">
+        <button type="submit">Subir</button>
+    </form>
+
+    <div id="respuesta"></div>
+
+</body>
+</html>

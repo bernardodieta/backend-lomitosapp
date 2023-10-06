@@ -1,0 +1,148 @@
+<%- include('partials/head'); %>
+<%- include('partials/header'); %>
+
+<div class="content__container">
+    <main>
+        <div class="background__refugiomain">
+            <div class="refugiosmain">
+                <h1 class="areatablet --tablet">Refugios</h1>
+                <% for(i = 0; i < refugios.length; i++) { %>
+                <p class="areatablet --tablet">Nos dirigimos a ustedes hoy con la esperanza de recibir su generosa
+                    ayuda para
+                    nuestro querido
+                    refugio de perros. Somos un refugio sin fines de lucro dedicado a brindar amor, cuidado y
+                    protección a perros abandonados y maltratados hasta que encuentren un hogar amoroso para
+                    siempre. Sin embargo, en este momento enfrentamos grandes desafíos y necesitamos de su apoyo
+                    para continuar nuestra importante labor. <br>
+                    Actualmente, tenemos una gran cantidad de perros en nuestro refugio. Cuidamos de más de 35
+                    perros en situaciones de extrema vulnerabilidad. Cada uno de estos adorables peludos merece
+                    una
+                    oportunidad justa de ser feliz y amado, y con su ayuda, podemos marcar la diferencia en sus
+                    vidas. <br>
+                    Desafortunadamente, nos encontramos con dificultades financieras y carecemos de los recursos
+                    necesarios para satisfacer todas las necesidades de nuestros perros. Estas son las formas en
+                    las
+                    que usted puede ayudarnos: <br>
+                </p>
+                <div class="refugiosmain__grid">
+                    <img src="<%= refugios[i].imagen1 %>" alt="Foto grande de perro en adopcion"
+                        class="fotospan">
+                    <div class="refugios__fotitos">
+                        <img src="<%= refugios[i].imagen2 %>" alt="Foto de perro en adopcion"
+                            class="fotos">
+                        <img src="<%= refugios[i].imagen3 %>" alt="Foto de perro en adopcion"
+                            class="fotos">
+                        <img src="<%= refugios[i].imagen4 %>" alt="Foto de perro en adopcion"
+                            class="fotos">
+                        <img src="<%= refugios[i].imagen5 %>" alt="Foto de perro en adopcion"
+                            class="fotos">
+
+
+                    </div>
+                    <div class="mapa-info">
+                        <h4>Ubicación</h4>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.620533013558!2d-99.1705341241563!3d19.428794940801165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff4a80ad3595%3A0xdc905a1e6e9fd289!2sC.%20R%C3%ADo%20Lerma%20142%2C%20Cuauht%C3%A9moc%2C%2006500%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses!2smx!4v1696363380058!5m2!1ses!2smx" width="500" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <!-- <img src="../public/img_static/refugiomenu/mapa.png" alt="Mapa de Ubicacion del refugio"
+                            class="maparef"> -->
+                    </div>
+                </div>
+                <div class="refugiosmain__textbox">
+                    <div class="refugiomain__textos">
+                        <div>
+                            <h3>Refugio</h3>
+                            <h3><%= refugios[i].nombrerefu %></h3>
+                            <h5><%= refugios[i].direccion %></h5>
+                            <h5><%= refugios[i].candog %></h5>
+                        </div>
+                        <div class="refugiomain__textos-btns">
+                            <div class="btn">
+                                <h4>Quiero hacer un donativo</h4>
+                            </div>
+                            <div class="btn">
+                                <h4>Me gustaria ir de visita</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="area --desktop">Nos dirigimos a ustedes hoy con la esperanza de recibir su generosa
+                        ayuda para
+                        nuestro querido
+                        refugio de perros. Somos un refugio sin fines de lucro dedicado a brindar amor, cuidado y
+                        protección a perros abandonados y maltratados hasta que encuentren un hogar amoroso para
+                        siempre. Sin embargo, en este momento enfrentamos grandes desafíos y necesitamos de su apoyo
+                        para continuar nuestra importante labor. <br>
+                        Actualmente, tenemos una gran cantidad de perros en nuestro refugio. Cuidamos de más de 35
+                        perros en situaciones de extrema vulnerabilidad. Cada uno de estos adorables peludos merece
+                        una
+                        oportunidad justa de ser feliz y amado, y con su ayuda, podemos marcar la diferencia en sus
+                        vidas. <br>
+                        Desafortunadamente, nos encontramos con dificultades financieras y carecemos de los recursos
+                        necesarios para satisfacer todas las necesidades de nuestros perros. Estas son las formas en
+                        las
+                        que usted puede ayudarnos: <br>
+                    </p>
+                    <%  } %>
+                    <ol class="areaayuda">
+                        <li><span class="spanbold">Alimento para perros:</span> Necesitamos con urgencia donaciones
+                            de alimento para perros
+                            de alta
+                            calidad. Nuestros perros merecen una dieta nutritiva para mantenerse saludables y
+                            enérgicos
+                            mientras esperan su hogar definitivo. <br></li>
+                        <li>
+                            <span class="spanbold"> Medicina para perros: </span>Nos enfrentamos a diversos
+                            problemas de salud en nuestros perros,
+                            incluyendo enfermedades, parásitos y lesiones. Necesitamos suministros médicos como
+                            vacunas,
+                            medicamentos, antiparasitarios y material de primeros auxilios para brindarles la
+                            atención
+                            que
+                            merecen. <br>
+                        </li>
+                        <li>
+                            <span class="spanbold">Materiales de construcción de jaulas para animales:</span>
+                            Deseamos mejorar nuestras instalaciones
+                            para
+                            brindar un entorno más seguro y cómodo a nuestros perros. Necesitamos materiales de
+                            construcción
+                            como alambre, madera, cemento y herramientas para renovar y construir jaulas y áreas de
+                            juego.
+                            <br>
+                        <li>
+                            <span class="spanbold">Artículos de higiene y cuidado:</span> Necesitamos productos de
+                            limpieza, camas, mantas, juguetes y
+                            correas para mantener a nuestros perros limpios, cómodos y entretenidos. <br>
+                        </li>
+                        <li>
+                            <span class="spanbold"> Voluntarios y servicios profesionales:</span> Si no puede
+                            realizar una donación en especie, su
+                            tiempo y
+                            habilidades también serían inmensamente valiosos para nosotros. Necesitamos voluntarios
+                            dispuestos a ayudar con la alimentación, el cuidado y el paseo de nuestros perros, así
+                            como
+                            profesionales veterinarios dispuestos a ofrecer sus servicios de manera pro bono. <br>
+                        </li>
+                    </ol>
+
+                    <p class="area">Cualquier donación o ayuda que pueda brindarnos será extremadamente apreciada y
+                        marcará una
+                        diferencia significativa en la vida de nuestros perros. Estamos comprometidos a brindarles
+                        un
+                        ambiente seguro y amoroso mientras esperan un hogar permanente. <br>
+                        En nombre de todos los perros en nuestro refugio, ¡les agradecemos profundamente su
+                        generosidad
+                        y compasión! Juntos, podemos hacer del mundo un lugar mejor para ellos. <br>
+
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+</div>
+
+<%- include('partials/donaciones'); %>
+
+<%- include('partials/footer'); %>

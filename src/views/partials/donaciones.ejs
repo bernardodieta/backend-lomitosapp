@@ -1,0 +1,43 @@
+
+<section class="refugios">
+    <div class="refugios__container">
+        <div class="refugios__container-img">
+            <img src="../content_edit/img/section4/casaperro.png" alt="Casa de Perro en 3D"
+                class="refugio__container-img-mobile">
+            <img src="../content_edit/img/section4/casaperrodesktop.png" alt="Casa de Perro en 3D"
+                class="refugios__container-img-desktop">
+
+        </div>
+        <div class="refugios__container-text">
+            <h2>Con tu Donación ayudas a un Lomito</h2>
+            <p>Con tu donativo no solo ayudas a un perro sino a todos los que viven en el Santuario.
+                Nos gustaría que formaras parte de este milagro de verlos luchar, recuperarse y aprender de
+                las lecciones diarias que nos enseñan, diciendo Sí a la vida a pesar de todo.
+                Dentro de los detalles de cada refugio puedes encontrar el numero de cuenta y la forma en la
+                que buscas realizar tu donativo.</p>
+                <a href="./refugiomenu.html">
+                    <div class="btn">
+                        <img src="../content_edit/img/icons/pata_btn.png" alt="Icono pata de perro">
+                        <h4>Quiero Donar</h4>
+                    </div>
+                </a>
+        </div>
+
+    </div>
+    <div class="refugios__box">
+        <% for(i = 0; i < data.length; i++) { %>
+            <% if (i === 3) { %>
+                <% break; %>
+              <% } %>
+        <div class="refugios__card">
+            <h3><%= data[i].nombrerefu %></h3>
+            <p><%= data[i].textarea1.substring(0, 220) + '...' %></p>
+            <h5>Ubicacion</h5>
+            <img src="../public/img_static/refugiomenu/mapa.png" alt="Mapa de ubicacion del refugio" class="mapita" style="width: 100%;">
+        </div>
+   
+        <%  } %>
+    </div>
+</section>
+
+

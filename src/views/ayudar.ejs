@@ -1,0 +1,109 @@
+<%- include('partials/head'); %>
+<%- include('partials/header'); %>
+
+<div class="content__container" id="content__container">
+    <main>
+        <div class="refugiomenu">
+            <div class="separador-izquierdo">
+                <img src="../content_edit/img/separadores/separador_izq.png" alt="imagen separadora de section">
+            </div>
+            <div class="refugiomenu__text">
+                <img src="../content_edit/img/separadores/icono_pata.png" alt="Icono de pata de perro">
+                <h1>Refugios</h1>
+                <h2>Que necesitan de tu ayuda</h2>
+            </div>
+            <div class="separador-derecho">
+                <img src="../content_edit/img/separadores/separador_der.png" alt="imagen separadora de section">
+            </div>
+        </div>
+   
+       
+       
+        <div class="refugiomenu__cards">
+            <% for(i = 0; i < refugios.length; i++) { %>
+            <div class="refugiomenu__cards-card">
+                <div class="category">Refugios - Ayuda</div>
+                <h3><%= refugios[i].nombrerefu %></h3>
+                <img src="<%= refugios[i].imagen1 %>" alt="foto de perros en refugio">
+                <p><%= refugios[i].textarea1.substring(0, 114) %></p>
+                <h4>Ubicación</h4>
+                <img src="../public/img_static/refugiomenu/mapa.png" alt="foto de mapa del refugio">
+                <a href="./refugioscard">
+                    <div class="btn">
+                        <a href="/refugioscard/<%= refugios[i].id %>">
+                        <img src="../public/img_static/refugiomenu/pata_btn.png" alt="Icono pata de perro">
+                        <h4>Quiero Ayudar</h4>
+                    </a>
+                    </div>
+                </a>
+            </div>
+            <%  } %>
+        </div>
+       
+    </main>
+</div>
+<section class="refugios">
+    <div class="refugios__container">
+        <div class="refugios__container-img">
+            <img src="../content_edit/img/section4/casaperro.png" alt="Casa de Perro en 3D"
+                class="refugio__container-img-mobile">
+            <img src="../content_edit/img/section4/casaperrodesktop.png" alt="Casa de Perro en 3D"
+                class="refugios__container-img-desktop">
+
+        </div>
+        <div class="refugios__container-text">
+            <h2>Con tu Donación ayudas a un Lomito</h2>
+            <p>Con tu donativo no solo ayudas a un perro sino a todos los que viven en el Santuario.
+                Nos gustaría que formaras parte de este milagro de verlos luchar, recuperarse y aprender de
+                las lecciones diarias que nos enseñan, diciendo Sí a la vida a pesar de todo.
+                Dentro de los detalles de cada refugio puedes encontrar el numero de cuenta y la forma en la
+                que buscas realizar tu donativo.</p>
+                <a href="./refugiomenu.html">
+                    <div class="btn">
+                        <img src="../content_edit/img/icons/pata_btn.png" alt="Icono pata de perro">
+                        <h4>Quiero Donar</h4>
+                    </div>
+                </a>
+        </div>
+
+    </div>
+    <div class="refugios__box">
+
+
+        <div class="refugios__card">
+            <h3>Milagros Caninos</h3>
+            <p>Nos dedicamos al cuidado y rehabilitación de perros con cáncer, sin patas, ciegos, sordos,
+                quemados, torturados, paralíticos, violados, y drogados, entre otras condiciones, ayudados
+                apadrinando a un perro.</p>
+            <h5>Ubicacion</h5>
+            <img src="../content_edit/img/section4/mapa.png" alt="Mapa de ubicacion del refugio" class="mapita">
+        </div>
+        <div class="refugios__card -statusmobile">
+            <h3>Milagros Caninos</h3>
+            <p>Nos dedicamos al cuidado y rehabilitación de perros con cáncer, sin patas, ciegos, sordos,
+                quemados, torturados, paralíticos, violados, y drogados, entre otras condiciones, ayudados
+                apadrinando a un perro.</p>
+            <h5>Ubicacion</h5>
+            <img src="../content_edit/img/section4/mapa.png" alt="Mapa de ubicacion del refugio" class="mapita">
+        </div>
+        <div class="refugios__card -statusmobile">
+            <h3>Milagros Caninos</h3>
+            <p>Nos dedicamos al cuidado y rehabilitación de perros con cáncer, sin patas, ciegos, sordos,
+                quemados, torturados, paralíticos, violados, y drogados, entre otras condiciones, ayudados
+                apadrinando a un perro.</p>
+            <h5>Ubicacion</h5>
+            <img src="../content_edit/img/section4/mapa.png" alt="Mapa de ubicacion del refugio" class="mapita">
+        </div>
+        <div class="refugios__card -statusmobile statustablet">
+            <h3>Milagros Caninos</h3>
+            <p>Nos dedicamos al cuidado y rehabilitación de perros con cáncer, sin patas, ciegos, sordos,
+                quemados, torturados, paralíticos, violados, y drogados, entre otras condiciones, ayudados
+                apadrinando a un perro.</p>
+            <h5>Ubicacion</h5>
+            <img src="../content_edit/img/section4/mapa.png" alt="Mapa de ubicacion del refugio" class="mapita">
+        </div>
+
+    </div>
+</section>
+
+ <%- include('partials/footer'); %>
